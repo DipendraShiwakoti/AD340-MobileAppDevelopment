@@ -3,4 +3,12 @@
     <string name="hello_world">Hello World!</string>
     <string name="name_and_date">name_and_date</string>
     <string name="My_name_and_date">Dipendra, Shiwakoti 4/7/2022</string>
+    <string name="name_input">Please enter your name</string>
+    <string name="email_address">Please enter your email address</string>
+    <string name="user_name">Please enter your user name</string>
+    <string name="submit">SUBMIT</string>
+    <string name="email_address_error">email address is not in the right format</string>
+    <string name="Data_entry_error">You forgot to input some data on the form</string>
+    <string name="signing_in_message">Thanks for signing up</string>
+    <string name="singning_up">Thanks for signing up</string>
 </resources>
