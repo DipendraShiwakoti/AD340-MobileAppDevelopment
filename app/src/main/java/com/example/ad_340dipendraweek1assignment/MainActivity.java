@@ -37,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
         if (Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches() == false){
             Toast.makeText(getApplicationContext(), getString(R.string.email_address_error), Toast.LENGTH_LONG).show();
         }
-        Intent intent = new Intent(MainActivity.class,WelcomeScreeen.class);
+        /* Intent intent = new Intent(MainActivity.class,WelcomeScreeen.class);
         intent.putExtra(Constants.USERNAME_KEY,username);
         startActivity(intent);
+
+         */
     }
 }

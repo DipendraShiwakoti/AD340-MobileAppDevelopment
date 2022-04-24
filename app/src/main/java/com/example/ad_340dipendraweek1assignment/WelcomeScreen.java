@@ -1,4 +1,6 @@
+/*
 package com.example.ad_340dipendraweek1assignment;
+
 
 import android.os.Bundle;
 
@@ -16,10 +18,11 @@ public class WelcomeScreen {
         
         if (bundle != null) {
             if(bundle.containsKey(Constants.USERNAEM_KEY)){
-                welcomeText.setText(.getString(R.string.singning_up) + bundle.getString(Constants.USERNAME_KEY)
+                welcomeText.setText((R.string.singning_up) + bundle.getString(Constants.USERNAME_KEY)
                 + ("!"));
             }
         }
         
     }
 }
+*/
