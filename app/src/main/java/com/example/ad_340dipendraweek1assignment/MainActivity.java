@@ -24,7 +24,7 @@ import java.time.Period;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+ public class MainActivity extends AppCompatActivity {
     private EditText nameField;
     private EditText emailAddressField;
     private EditText usernameField;
@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
         userNameField = findViewById(R.id.userName);
         dobTextView = findViewById(R.id.selectedDateOfBirth);
     }
-    public void onSubmit(View view){
+    /* public void onSubmit(View view){
         String name = nameField.getText().toString();
         String emailAddress = emailAddressField.getText().toString();
         BreakIterator userNameField;
-        String username = userNameField.getText().toString();
+        // String username = userNameField.getText().toString();
 
 
         if(name.equals("") || emailAddress.equals("") || username.equals("") || dobYear == 0 || dobMonth == 0 || dobDay == 0){
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        LocalDate currentDate = LocalDate.now();
+       LocalDate currentDate = LocalDate.now();
         LocalDate dateOfBirth = LocalDate.of(dobYear, dobMonth, dobDay);
         int years = Period.between(dateOfBirth, currentDate).getYears();
 
@@ -127,4 +127,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+        */
+
+
+
 }
+
