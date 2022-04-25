@@ -28,6 +28,17 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameField" />
 
+    <Button
+        android:id="@+id/dobButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter your Date of Birth"
+        android:onClick="onDobClick"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
     <EditText
         android:id = "@+id/userName"
         android:layout_width="match_parent"
@@ -48,6 +59,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/userName" />
+
+
 
     <TextView
         android:id ="@+id/nameAndDate"
