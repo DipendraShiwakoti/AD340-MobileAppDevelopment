@@ -42,7 +42,7 @@ import java.util.Locale;
         nameField = findViewById(R.id.nameField);
         emailAddressField = findViewById(R.id.emailAddress);
         userNameField = findViewById(R.id.userName);
-       // dobTextView = findViewById(R.id.selectedDateOfBirth);
+        dobTextView = findViewById(R.id.selectedDateOfBirth);
     }
     /* public void onSubmit(View view){
         String name = nameField.getText().toString();

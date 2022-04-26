@@ -24,8 +24,8 @@ public class MainActivityTest {
    public ActivityScenarioRule mainActivityRule = new ActivityScenarioRule<>(MainActivity.class);
 
     @Test
-   public void displaysHelloWorld(){
-        onView(withId(R.id.submitButton)).check(matches(withText("submit")));
+   public void displaysDateOfBirth(){
+        onView(withId(R.id.dobButton)).check(matches(withText("ENTER YOUR DATE OF BIRTH")));
     }
 
 
