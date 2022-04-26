@@ -44,15 +44,15 @@ import java.util.Locale;
         userNameField = findViewById(R.id.userName);
         dobTextView = findViewById(R.id.selectedDateOfBirth);
     }
-    /* public void onSubmit(View view){
+     public void onSubmit(View view){
         String name = nameField.getText().toString();
         String emailAddress = emailAddressField.getText().toString();
         BreakIterator userNameField;
-        // String username = userNameField.getText().toString();
+        String username = usernameField.getText().toString();
 
 
-        if(name.equals("") || emailAddress.equals("") || username.equals("") || dobYear == 0 || dobMonth == 0 || dobDay == 0){
-            Toast.makeText(getApplicationContext(), getString(R.string.forgot_data_error), Toast.LENGTH_LONG).show();
+        if(name.equals("") || emailAddress.equals("") || usernameField.equals("") || dobYear == 0 || dobMonth == 0 || dobDay == 0){
+            Toast.makeText(getApplicationContext(), getString(R.string.forget_date_of_Birth), Toast.LENGTH_LONG).show();
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()) {
@@ -65,12 +65,12 @@ import java.util.Locale;
         int years = Period.between(dateOfBirth, currentDate).getYears();
 
         if (years < 18) {
-            Toast.makeText(getApplicationContext(), getString(R.string.eighteen_error), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getString(R.string.Eighteen_years_error), Toast.LENGTH_LONG).show();
             return;
         }
 
         Intent intent = new Intent(getApplicationContext(), WelcomeScreen.class);
-        intent.putExtra(Constants.USERNAME_KEY, username);
+        intent.putExtra(Constants.Username_Key, username);
         startActivity(intent);
 
     }
@@ -105,16 +105,19 @@ import java.util.Locale;
         dobMonth = 0;
     }
 
-    @Override
+
     public void onDateSet(DatePicker view, int year, int month, int day) {
         month = month + 1;
         dobYear = year;
         dobMonth = month;
         dobDay = day;
-        dobTextView.setText(month + getString(R.string.slash) + day + getString(R.string.slash) + year);
+         dobTextView.setText(month + getString(R.string.slash) + day + getString(R.string.slash) + year);
     }
 
-    public static class DatePickerFragment extends DialogFragment {
+     public void submit(View view) {
+     }
+
+     public static class DatePickerFragment extends DialogFragment {
         @NonNull
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -123,11 +126,11 @@ import java.util.Locale;
             int month = c.get(Calendar.MONTH);
             int day = c.get(Calendar.DAY_OF_MONTH);
 
-            return new DatePickerDialog(getActivity(),(MainActivity) getActivity(), year, month, day);
+            return new DatePickerDialog(getActivity(), (DatePickerDialog.OnDateSetListener) getActivity(), year, month, day);
         }
     }
 
-        */
+
 
 
 
