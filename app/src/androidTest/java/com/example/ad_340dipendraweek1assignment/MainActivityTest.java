@@ -1,6 +1,6 @@
 
 package com.example.ad_340dipendraweek1assignment;
-/*
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
@@ -25,11 +25,10 @@ public class MainActivityTest {
 
     @Test
    public void displaysHelloWorld(){
-        onView(withId(R.id.hello_world)).check(matches(withText("Hello World")));
+        onView(withId(R.id.submitButton)).check(matches(withText("submit")));
     }
 
 
 
 }
 
- */
