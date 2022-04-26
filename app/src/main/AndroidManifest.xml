@@ -8,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AD340DipendraWeek1Assignment">
-        android:requestLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true">
         <activity
             android:name=".MainActivity"
             android:exported="true">
