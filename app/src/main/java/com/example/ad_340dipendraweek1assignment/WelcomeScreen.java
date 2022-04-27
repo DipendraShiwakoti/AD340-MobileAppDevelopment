@@ -34,6 +34,7 @@ import androidx.appcompat.app.AppCompatActivity;
     }
 
      public void onBackClick(View view) {
+        finish();
      }
  }
 
