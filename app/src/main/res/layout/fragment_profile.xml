@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeScreen">
+    tools:context=".ProfileFragment">
 
     <ImageView
         android:id="@+id/profilePicture"
         android:layout_width="match_parent"
         android:layout_height="@dimen/threeTwenty"
         android:contentDescription="@string/the_picture_of_nature"
-        android:src="@drawable/nature"/>
+        android:src="@drawable/nature" />
 
     <TextView
         android:id="@+id/name"

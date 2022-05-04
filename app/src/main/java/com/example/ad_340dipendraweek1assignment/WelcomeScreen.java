@@ -30,12 +30,10 @@ import androidx.appcompat.app.AppCompatActivity;
         
     }
 
-    private void setConstantView(int activity_welcomescreen) {
-    }
-
-     public void onBackClick(View view) {
-        finish();
+     private void setConstantView(int activity_welcomescreen) {
      }
+
+
  }
 
 
