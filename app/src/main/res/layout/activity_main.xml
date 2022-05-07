@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email_address"
-        app:layout_constraintBottom_toTopOf="@id/userName"
+        app:layout_constraintBottom_toTopOf="@id/username"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameField" />
@@ -37,11 +37,11 @@
         app:layout_constraintBottom_toTopOf="@+id/submitButton"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/username"
         tools:ignore="OnClick" />
 
     <EditText
-        android:id = "@+id/userName"
+        android:id = "@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/user_name"
@@ -55,14 +55,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text = "@string/submit"
-        android:onClick = "onSubmit"
+        android:onClick="onSubmit"
         app:layout_constraintBottom_toTopOf="@id/nameAndDate"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userName"
-        tools:ignore="OnClick" />
+        app:layout_constraintTop_toBottomOf="@id/selectedDateOfBirth" />
 
-
+    <TextView
+        android:id="@+id/selectedDateOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/submitButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dobButton" />
 
     <TextView
         android:id ="@+id/nameAndDate"
@@ -72,5 +78,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/userName" />
+        app:layout_constraintTop_toTopOf="@id/username" />
 </androidx.constraintlayout.widget.ConstraintLayout>

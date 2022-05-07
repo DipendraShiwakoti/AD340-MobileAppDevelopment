@@ -10,8 +10,12 @@
         android:theme="@style/Theme.AD340DipendraWeek1Assignment"
         android:requestLegacyExternalStorage="true">
         <activity
+            android:name=".WelcomeScreen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -10,9 +10,8 @@
     <string name="email_address_error">email address is not in the right format</string>
     <string name="Data_entry_error">You forgot to input some data on the form</string>
     <string name="signing_in_message">Thanks for signing up</string>
-    <string name="singning_up">Thanks for signing up</string>
+    <string name="signing_up">Thanks for signing up</string>
     <string name="forget_date_of_Birth">You forget to input your data of Birth</string>
-    <string name="Eighteen_years_error">you should be 18 years</string>
     <string name="back">back</string>
     <string name="slash">/</string>
     <string name="enter_your_date_of_birth">Enter your Date of Birth</string>
@@ -22,4 +21,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="there_is_where_setting_will_go">There is where setting will go</string>
     <string name="this_is_where_matches_will_go">This is where matches will go</string>
+    <string name="singingIn">Thanks for singing in</string>
+    <string name="date">Enter Date</string>
+    <string name="dateSelect">Select date</string>
+    <string name="Thank_you_message">\Thanks for signing in \ </string>
+    <string name="exclamaion">!</string>
+    <string name="Eighteen_years">You should be 18 years</string>
+    <string name="Date_Of_birth">input date of birth</string>
 </resources>

@@ -1,86 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WelcomeScreen">
 
-    <ImageView
-        android:id="@+id/profilePicture"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/threeTwenty"
-        android:contentDescription="@string/the_picture_of_nature"
-        android:src="@drawable/nature"/>
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profilePicture"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:text="Dipendra"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/occupationField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
-        android:text="student"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/descriptionField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/occupationField"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
-        android:text="Nature lover;cool person"
-        android:textSize="13sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profilePicture"
-        android:layout_toEndOf="@id/name"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
-        android:gravity="bottom"
-        android:text="25"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_alignBottom="@id/name"/>
-
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        />
+        app:layout_constraintBottom_toTopOf="@id/backButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/descriptionField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="@dimen/thirty"
-        android:layout_marginTop="@dimen/thirty"
-        android:layout_marginEnd="@dimen/thirty"
-        android:layout_marginBottom="@dimen/thirty"
+        android:text="@string/back"
         android:onClick="onBackClick"
-        android:text="@string/back" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText" />
 
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
