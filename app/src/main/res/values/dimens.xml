@@ -4,4 +4,8 @@
     <dimen name="dimension_height">300dp</dimen>
     <dimen name="thirty">30dp</dimen>
     <dimen name="threeTwenty">320dp</dimen>
+    <dimen name="five_dp">5dp</dimen>
+    <dimen name="twenty_sp">20sp</dimen>
+    <dimen name="twenty_dp">20dp</dimen>
+    <dimen name="three_ten_dp">310dp</dimen>
 </resources>

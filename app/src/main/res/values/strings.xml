@@ -11,7 +11,7 @@
     <string name="Data_entry_error">You forgot to input some data on the form</string>
     <string name="signing_in_message">Thanks for signing up</string>
     <string name="signing_up">Thanks for signing up</string>
-    <string name="forget_date_of_Birth">You forget to input your data of Birth</string>
+    <string name="forget_date_of_Birth">You forget to input the required field</string>
     <string name="back">back</string>
     <string name="slash">/</string>
     <string name="enter_your_date_of_birth">Enter your Date of Birth</string>
@@ -28,4 +28,5 @@
     <string name="exclamaion">!</string>
     <string name="Eighteen_years">You should be 18 years</string>
     <string name="Date_Of_birth">input date of birth</string>
+    <string name="twenty_eight">28</string>
 </resources>

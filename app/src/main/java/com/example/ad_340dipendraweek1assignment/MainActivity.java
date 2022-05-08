@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity
     private EditText emailAddressField;
     private EditText usernameField;
     private TextView dobTextView;
+    private TextView descriptionField;
+    private TextView occupationField;
+
+
     private int dobYear = 0;
     private int dobMonth = 0;
     private int dobDay = 0;
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity
         emailAddressField = findViewById(R.id.emailAddress);
         usernameField = findViewById(R.id.username);
         dobTextView = findViewById(R.id.selectedDateOfBirth);
+        descriptionField = findViewById(R.id.descriptionField);
+        occupationField = findViewById(R.id.occupationField);
     }
 
 
@@ -47,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         String emailAddress = emailAddressField.getText().toString();
         String username = usernameField.getText().toString();
 
-        if (name.equals("") || emailAddress.equals("") || username.equals("") || dobYear == 0 || dobMonth == 0 || dobDay == 0) {
+        if ( descriptionField.equals("")|| occupationField.equals("") || name.equals("") || emailAddress.equals("") || username.equals("") || dobYear == 0 || dobMonth == 0 || dobDay == 0) {
             // empty strings are not valid form input show a Toast to the user
             Toast.makeText(getApplicationContext(), R.string.Date_Of_birth, Toast.LENGTH_LONG).show();
             return;
@@ -68,7 +74,11 @@ public class MainActivity extends AppCompatActivity
         }
 
         Intent intent = new Intent(getApplicationContext(), WelcomeScreen.class);
-        intent.putExtra(Constants.USERNAME_KEY, username);
+        intent.putExtra(Constants.USERNAME_KEY, name);
+        intent.putExtra(Constants.AGE_KEY,years);
+        intent.putExtra(Constants.DESCRIPTION_KEY, descriptionField.getText().toString());
+        intent.putExtra(Constants.OCCUPATION_KEY, occupationField.getText().toString());
+
         startActivity(intent);
     }
 
@@ -98,6 +108,8 @@ public class MainActivity extends AppCompatActivity
          usernameField.setText("");
          emailAddressField.setText("");
          dobTextView.setText("");
+         occupationField.setText("");
+         descriptionField.setText("");
          dobYear = 0;
          dobDay = 0;
          dobMonth = 0;
