@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/three_ten_dp"
         android:contentDescription="@string/the_picture_of_nature"
-        android:src="@drawable/picture" />
+        android:src="@drawable/nature" />
 
     <TextView
         android:id = "@+id/name"
