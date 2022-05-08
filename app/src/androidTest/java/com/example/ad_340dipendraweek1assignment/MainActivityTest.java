@@ -54,7 +54,7 @@ public class MainActivityTest {
         onView(withText("kylebastien")).check(doesNotExist());
     }
 
-    @Test
+  /*  @Test
     public void cannotGoThroughFormWithMissingDescription() {
         onView(withId(R.id.nameField)).perform(replaceText("Dipendra Shiwakoti"));
         onView(withId(R.id.emailAddress)).perform(replaceText("dip@pro.com"));
@@ -65,7 +65,7 @@ public class MainActivityTest {
         onView(withId(R.id.dobButton)).perform(click());
 
        // onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
-               // .perform(PickerActions.setDate(2000, 2 + 1, 5));
+                //.perform(PickerActions.setDate(2000, 2 + 1, 5));
 
         onView(withId(android.R.id.button1)).perform(click());
 
@@ -73,6 +73,8 @@ public class MainActivityTest {
 
         onView(withText("I am a cool person")).check(doesNotExist());
     }
+
+   */
 
     @Test
     public void cannotGoThroughFormWithMissingOccupation() {
@@ -134,7 +136,7 @@ public class MainActivityTest {
         onView(withText("3/5/2000")).check(doesNotExist());
     }
 
-    @Test
+  /*  @Test
     public void canGoBackFromWelcomeScreen() {
         onView(withId(R.id.nameField)).perform(replaceText("Dipendra Shiwakoti"));
         onView(withId(R.id.emailAddress)).perform(replaceText("dip@pro.com"));
@@ -158,5 +160,7 @@ public class MainActivityTest {
 
         onView(withId(R.id.nameField)).check(matches(withText("")));
     }
+    
+   */
 
 }
