@@ -4,7 +4,6 @@ package com.example.ad_340dipendraweek1assignment;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.replaceText;
-import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
@@ -13,7 +12,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 import android.widget.DatePicker;
 
-//import androidx.test.espresso.contrib.PickerActions;
+import androidx.test.espresso.contrib.PickerActions;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -44,17 +43,17 @@ public class MainActivityTest {
 
         onView(withId(R.id.dobButton)).perform(click());
 
-       // onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
-               // .perform(PickerActions.setDate(2000, 2 + 1, 5));
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2000, 2 + 1, 5));
 
         onView(withId(android.R.id.button1)).perform(click());
 
         onView(withId(R.id.submitButton)).perform(click());
 
-        onView(withText("kylebastien")).check(doesNotExist());
+        onView(withText("dipshi")).check(doesNotExist());
     }
 
-  /*  @Test
+    @Test
     public void cannotGoThroughFormWithMissingDescription() {
         onView(withId(R.id.nameField)).perform(replaceText("Dipendra Shiwakoti"));
         onView(withId(R.id.emailAddress)).perform(replaceText("dip@pro.com"));
@@ -64,8 +63,8 @@ public class MainActivityTest {
 
         onView(withId(R.id.dobButton)).perform(click());
 
-       // onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
-                //.perform(PickerActions.setDate(2000, 2 + 1, 5));
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2000, 2 + 1, 5));
 
         onView(withId(android.R.id.button1)).perform(click());
 
@@ -74,7 +73,7 @@ public class MainActivityTest {
         onView(withText("I am a cool person")).check(doesNotExist());
     }
 
-   */
+
 
     @Test
     public void cannotGoThroughFormWithMissingOccupation() {
@@ -86,14 +85,14 @@ public class MainActivityTest {
 
         onView(withId(R.id.dobButton)).perform(click());
 
-       // onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
-              //  .perform(PickerActions.setDate(2000, 2 + 1, 5));
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2000, 2 + 1, 5));
 
         onView(withId(android.R.id.button1)).perform(click());
 
         onView(withId(R.id.submitButton)).perform(click());
 
-        onView(withText("Software Engineer")).check(doesNotExist());
+        onView(withText("AD BAS student")).check(doesNotExist());
     }
 
     @Test
@@ -106,14 +105,14 @@ public class MainActivityTest {
 
         onView(withId(R.id.dobButton)).perform(click());
 
-        // onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
-              //  .perform(PickerActions.setDate(2000, 2 + 1, 5));
+         onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2000, 2 + 1, 5));
 
         onView(withId(android.R.id.button1)).perform(click());
 
         onView(withId(R.id.submitButton)).perform(click());
 
-        onView(withText("foo@bar.com")).check(doesNotExist());
+        onView(withText("dip@gmail.com")).check(doesNotExist());
     }
 
     @Test
@@ -126,17 +125,17 @@ public class MainActivityTest {
 
         onView(withId(R.id.dobButton)).perform(click());
 
-       // onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
-              //  .perform(PickerActions.setDate(2021, 2 + 1, 5));
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+               .perform(PickerActions.setDate(2021, 2 + 1, 5));
 
         onView(withId(android.R.id.button1)).perform(click());
 
         onView(withId(R.id.submitButton)).perform(click());
 
-        onView(withText("3/5/2000")).check(doesNotExist());
+        onView(withText("3/5/1999")).check(doesNotExist());
     }
 
-  /*  @Test
+    @Test
     public void canGoBackFromWelcomeScreen() {
         onView(withId(R.id.nameField)).perform(replaceText("Dipendra Shiwakoti"));
         onView(withId(R.id.emailAddress)).perform(replaceText("dip@pro.com"));
@@ -146,8 +145,8 @@ public class MainActivityTest {
 
         onView(withId(R.id.dobButton)).perform(click());
 
-       // onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
-               // .perform(PickerActions.setDate(2000, 2 + 1, 5));
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2000, 2 + 1, 5));
 
         onView(withId(android.R.id.button1)).perform(click());
 
@@ -161,6 +160,6 @@ public class MainActivityTest {
         onView(withId(R.id.nameField)).check(matches(withText("")));
     }
     
-   */
+
 
 }
