@@ -158,5 +158,5 @@ public class MainActivityTest {
 
         onView(withId(R.id.nameField)).check(matches(withText("")));
     }
-    
+
 }
