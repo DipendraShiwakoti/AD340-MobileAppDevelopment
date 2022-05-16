@@ -1,6 +1,5 @@
 
 package com.example.ad_340dipendraweek1assignment;
-
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.replaceText;
@@ -18,6 +17,8 @@ import org.hamcrest.Matchers;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
@@ -158,6 +159,4 @@ public class MainActivityTest {
         onView(withId(R.id.nameField)).check(matches(withText("")));
     }
     
-
-
 }
