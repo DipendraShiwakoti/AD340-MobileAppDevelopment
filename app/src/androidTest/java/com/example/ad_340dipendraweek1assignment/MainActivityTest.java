@@ -49,16 +49,15 @@ public class MainActivityTest {
 
         onView(withId(R.id.submitButton)).perform(click());
 
-        onView(withText("kylebastien")).check(doesNotExist());
+        onView(withText("dipenshi")).check(doesNotExist());
     }
 
     @Test
-    public void cannotGoThroughFormWithMissingDescription() {
-        onView(withId(R.id.nameField)).perform(replaceText("Dipendra Shiwakoti"));
-        onView(withId(R.id.emailAddress)).perform(replaceText("dip@pro.com"));
+    public void cannotGoThroughFormWithMissingName() {
+        onView(withId(R.id.emailAddress)).perform(replaceText("foo@bar.com"));
+        onView(withId(R.id.username)).perform(replaceText("dipshi"));
         onView(withId(R.id.descriptionField)).perform(replaceText("I am a cool person"));
         onView(withId(R.id.occupationField)).perform(replaceText("BAS student"));
-        onView(withId(R.id.username)).perform(replaceText("dipshi"));
 
         onView(withId(R.id.dobButton)).perform(click());
 
@@ -69,10 +68,8 @@ public class MainActivityTest {
 
         onView(withId(R.id.submitButton)).perform(click());
 
-        onView(withText("I am a cool person")).check(doesNotExist());
+        onView(withText("Kyle Bastien")).check(doesNotExist());
     }
-
-
 
     @Test
     public void cannotGoThroughFormWithMissingOccupation() {
@@ -137,10 +134,10 @@ public class MainActivityTest {
     @Test
     public void canGoBackFromWelcomeScreen() {
         onView(withId(R.id.nameField)).perform(replaceText("Dipendra Shiwakoti"));
-        onView(withId(R.id.emailAddress)).perform(replaceText("dip@pro.com"));
+        onView(withId(R.id.emailAddress)).perform(replaceText("foo@bar.com"));
+        onView(withId(R.id.username)).perform(replaceText("dipshi"));
         onView(withId(R.id.descriptionField)).perform(replaceText("I am a cool person"));
         onView(withId(R.id.occupationField)).perform(replaceText("BAS student"));
-        onView(withId(R.id.username)).perform(replaceText("dipshi"));
 
         onView(withId(R.id.dobButton)).perform(click());
 
@@ -158,5 +155,6 @@ public class MainActivityTest {
 
         onView(withId(R.id.nameField)).check(matches(withText("")));
     }
+
 
 }
