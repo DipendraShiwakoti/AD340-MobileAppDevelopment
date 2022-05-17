@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class ProfileFragment extends Fragment {
-    ProfileData profileDate;
+    ProfileData profileData;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,10 +23,17 @@ public class ProfileFragment extends Fragment {
         TextView age = view.findViewById(R.id.age);
         TextView description = view.findViewById(R.id.descriptionField);
 
+        if (this.profileData != null) {
+            name.setText(this.profileData.getName());
+            age.setText(getString(R.string.Mark) + this.profileData.getAge());
+            occupation.setText(this.profileData.getOccupation());
+            description.setText(this.profileData.getDescription());
+        }
+
         return view;
     }
 
-    public void setProfileDate (ProfileData profileData) {
-        this.profileDate = profileData;
+    public void setProfileData(ProfileData profileData) {
+        this.profileData = profileData;
     }
 }

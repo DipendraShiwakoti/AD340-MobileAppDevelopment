@@ -12,4 +12,20 @@ public class ProfileData {
         this.occupation = occupation;
         this.description = description;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

@@ -29,4 +29,10 @@
     <string name="Eighteen_years">You should be 18 years</string>
     <string name="Date_Of_birth">input date of birth</string>
     <string name="twenty_eight">28</string>
+    <string name="profile">profile</string>
+    <string name="matches">matches</string>
+    <string name="settings">settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">close navigation drawer</string>
+    <string name="Mark" />
 </resources>
