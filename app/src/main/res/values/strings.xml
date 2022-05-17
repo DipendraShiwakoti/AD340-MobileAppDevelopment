@@ -35,4 +35,6 @@
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">close navigation drawer</string>
     <string name="Mark" />
+    <string name="mark_t">mark_t</string>
+    <string name="really_cool_guy">really_cool_guy</string>
 </resources>
