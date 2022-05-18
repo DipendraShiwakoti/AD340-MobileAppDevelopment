@@ -21,10 +21,10 @@ public class MatchesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_matches, container, false);
 
-        List<Matches> matchesList = new ArrayList<>();
-        matchesList.add(new Matches("Mark t", "really cool guy", false));
-        matchesList.add(new Matches("Nicol T", "really cool guy", true));
-        matchesList.add(new Matches("Tone R", "really cool guy", false));
+         List<Matches> matchesList = new ArrayList<>();
+        // matchesList.add(new Matches("Mark t", "really cool guy", false));
+        // matchesList.add(new Matches("Nicol T", "really cool guy", true));
+       // matchesList.add(new Matches("Tone R", "really cool guy", false));
 
         // Set up the RecyclerView
 

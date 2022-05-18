@@ -3,13 +3,11 @@ package com.example.ad_340dipendraweek1assignment;
 public class Matches {
     private String name;
     private String description;
-    private boolean liked;
-
-    public Matches(String name, String description, boolean like){
-        this.name = name;
-        this.description = description;
-        this.liked = liked;
-    }
+    private boolean isliked;
+    private String imageUrl;
+    private String lat;
+    private String longitude;
+    private String uid;
 
     public String getName() {
         return name;
@@ -27,11 +25,43 @@ public class Matches {
         this.description = description;
     }
 
-    public boolean isLike() {
-        return liked;
+    public boolean isLiked() {
+        return isliked;
     }
 
-    public void setLike(boolean like) {
-        this.liked = liked;
+    public void setLiked(boolean liked) {
+        this.isliked = liked;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }
