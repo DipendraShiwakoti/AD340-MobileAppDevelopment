@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 
 /**
@@ -21,10 +22,11 @@ import java.util.List;
 public class MatchesRecyclerViewAdapter extends RecyclerView.Adapter<MatchesViewHolder> {
 
     private List<Matches> matchesList;
+    private Consumer<Matches> onClickCallback;
 
-
-    MatchesRecyclerViewAdapter(List<Matches> productList) {
+    MatchesRecyclerViewAdapter(List<Matches> matchesList, Consumer<Matches> onClickCallback) {
         this.matchesList = matchesList;
+        this.onClickCallback = onClickCallback;
     }
 
     @NonNull
@@ -36,7 +38,22 @@ public class MatchesRecyclerViewAdapter extends RecyclerView.Adapter<MatchesView
 
     @Override
     public void onBindViewHolder(@NonNull MatchesViewHolder holder, int position) {
-        // TODO: Put ViewHolder binding code here in MDC-102
+        if (matchesList != null && position < matchesList.size()) {
+            Matches match = matchesList.get(position);
+            holder.matchesName.setText(match.getName());
+            Picasso.get().load(match.getImageUrl()).into(holder.matchesImage);
+            if (match.isLiked()) {
+                holder.likeButton.setImageResource(R.drawable.heart_icon_filled);
+            } else {
+                holder.likeButton.setImageResource(R.drawable.heart_icon);
+            }
+            holder.likeButton.setOnClickListener((v) -> {
+                Toast.makeText(v.getContext(),
+                        String.format(v.getContext().getString(R.string.liked_message),
+                                match.getName()), Toast.LENGTH_LONG).show();
+                onClickCallback.accept(match);
+            });
+        }
     }
 
     @Override

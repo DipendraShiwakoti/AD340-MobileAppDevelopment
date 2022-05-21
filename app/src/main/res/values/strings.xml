@@ -37,4 +37,7 @@
     <string name="Mark" />
     <string name="mark_t">mark_t</string>
     <string name="really_cool_guy">really_cool_guy</string>
+    <string name="image_of_the_match">Image of the match</string>
+    <string name="liked_message">You liked: %s</string>
+    <string name="heart_image">heart Image</string>
 </resources>

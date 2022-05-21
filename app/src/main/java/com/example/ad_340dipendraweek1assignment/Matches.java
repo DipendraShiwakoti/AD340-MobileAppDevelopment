@@ -2,12 +2,15 @@ package com.example.ad_340dipendraweek1assignment;
 
 public class Matches {
     private String name;
-    private String description;
-    private boolean isliked;
+    private boolean liked;
     private String imageUrl;
     private String lat;
     private String longitude;
     private String uid;
+
+    public Matches() {
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+    }
 
     public String getName() {
         return name;
@@ -17,20 +20,12 @@ public class Matches {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public boolean isLiked() {
-        return isliked;
+        return liked;
     }
 
     public void setLiked(boolean liked) {
-        this.isliked = liked;
+        this.liked = liked;
     }
 
     public String getImageUrl() {
