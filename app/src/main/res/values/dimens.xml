@@ -15,4 +15,5 @@
     <dimen name="grid_spacing">16dp</dimen>
     <dimen name="Scroll_view_margin_top">56dp</dimen>
     <dimen name="small_grid_spacing">16dp</dimen>
+    <dimen name="scrollview_margin_top">56dp</dimen>
 </resources>
