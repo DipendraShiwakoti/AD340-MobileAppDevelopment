@@ -32,5 +32,6 @@ public class WelcomeScreenTest {
         onView(withRecyclerView(R.id.recycler_view).atPosition(0))
                 .check(matches(hasDescendant(withText("Cool Guy Mike"))));
     }
+
 }
 

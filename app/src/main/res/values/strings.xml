@@ -40,4 +40,6 @@
     <string name="image_of_the_match">Image of the match</string>
     <string name="liked_message">You liked: %s</string>
     <string name="heart_image">heart Image</string>
+    <string name="please_input_your_occupation">Please Input your Occupation</string>
+    <string name="please_input_a_description_of_yourself">Please Input a Description of Yourself</string>
 </resources>
