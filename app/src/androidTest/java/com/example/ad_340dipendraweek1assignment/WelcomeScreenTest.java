@@ -45,9 +45,6 @@ public class WelcomeScreenTest {
 
     @Test
     public void clickingOnMatchesDrawerItemDisplaysMatchesFragment() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
-        onView(withId(R.id.matches_menu_item)).perform(click());
-
         double latitude = 47.6082d;
         double longitude = -122.1890d;
         welcomeScreenActivity.getScenario().onActivity(activity -> {
@@ -56,7 +53,10 @@ public class WelcomeScreenTest {
                     latitude, longitude);
         });
 
-        onView(isRoot()).perform(HelpersViewMatcher.waitView(withText("Cool Guy Mike"), 5000));
+        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withId(R.id.matches_menu_item)).perform(click());
+
+        onView(isRoot()).perform(HelpersViewMatcher.waitView(withText("Cool Guy Mike"), 10000));
 
         onView(withRecyclerView(R.id.recycler_view).atPosition(0))
                 .check(matches(hasDescendant(withText("Cool Guy Mike"))));
@@ -71,5 +71,6 @@ public class WelcomeScreenTest {
                 matches(withText("Pick your daily matches reminder time")));
     }
 }
+
 
 
