@@ -52,14 +52,14 @@ public class WelcomeScreenTest {
                 .check(matches(hasDescendant(withText("Cool Guy Mike"))));
     }
 
-//    @Test
-//    public void clickingOnSettingsDrawerItemDisplaysSettingsFragment() {
-//        onView(withContentDescription("Open navigation drawer")).perform(click());
-//        onView(withId(R.id.settings_menu_item)).perform(click());
-//
-//        onView(withId(R.id.matches_reminder_time_label)).check(
-//                matches(withText("Pick your daily matches reminder time")));
-//    }
+    @Test
+    public void clickingOnSettingsDrawerItemDisplaysSettingsFragment() {
+        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withId(R.id.settings_menu_item)).perform(click());
+
+        onView(withId(R.id.matches_reminder_time_label)).check(
+                matches(withText("pick your daily matches reminder time")));
+    }
 }
 
 
