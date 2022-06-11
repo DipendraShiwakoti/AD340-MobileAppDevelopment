@@ -12,8 +12,6 @@ import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentat
 import static com.example.ad_340dipendraweek1assignment.RecyclerViewMatcher.withRecyclerView;
 
 import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
 
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
@@ -45,14 +43,6 @@ public class WelcomeScreenTest {
 
     @Test
     public void clickingOnMatchesDrawerItemDisplaysMatchesFragment() {
-        double latitude = 47.6082d;
-        double longitude = -122.1890d;
-        welcomeScreenActivity.getScenario().onActivity(activity -> {
-            LocationUtils.startUpdates(activity,
-                    new Handler(Looper.getMainLooper()),
-                    latitude, longitude);
-        });
-
         onView(withContentDescription("Open navigation drawer")).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
 
@@ -62,15 +52,14 @@ public class WelcomeScreenTest {
                 .check(matches(hasDescendant(withText("Cool Guy Mike"))));
     }
 
-    @Test
-    public void clickingOnSettingsDrawerItemDisplaysSettingsFragment() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
-        onView(withId(R.id.settings_menu_item)).perform(click());
-
-        onView(withId(R.id.matches_reminder_time_label)).check(
-                matches(withText("Pick your daily matches reminder time")));
-    }
+//    @Test
+//    public void clickingOnSettingsDrawerItemDisplaysSettingsFragment() {
+//        onView(withContentDescription("Open navigation drawer")).perform(click());
+//        onView(withId(R.id.settings_menu_item)).perform(click());
+//
+//        onView(withId(R.id.matches_reminder_time_label)).check(
+//                matches(withText("Pick your daily matches reminder time")));
+//    }
 }
-
 
 
