@@ -18,11 +18,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/profilePicture"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:text="Dipendra"
+        android:layout_marginStart="@dimen/twenty_five_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:text="@string/name"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/dims"
         android:textStyle="bold" />
 
     <TextView
@@ -30,10 +30,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/twenty_five_dp"
+        android:layout_marginTop="@dimen/five_dp"
         android:text="student"
-        android:textSize="15sp"
+        android:textSize="@dimen/fifteen_dp"
         android:textStyle="bold" />
 
     <TextView
@@ -41,10 +41,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/occupationField"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/twenty_five"
+        android:layout_marginTop="@dimen/five_dp"
         android:text="Nature lover;cool person"
-        android:textSize="13sp"
+        android:textSize="@dimen/thirteen_sp"
         android:textStyle="bold" />
 
     <TextView
@@ -53,11 +53,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/profilePicture"
         android:layout_toEndOf="@id/name"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="@dimen/twenty_five_sp"
+        android:layout_marginTop="@dimen/twenty_dp"
         android:gravity="bottom"
-        android:text="25"
-        android:textSize="15sp"
+        android:text="@string/_25"
+        android:textSize="@dimen/fifteen_sp"
         android:textStyle="bold"
         android:layout_alignBottom="@id/name"/>
 
