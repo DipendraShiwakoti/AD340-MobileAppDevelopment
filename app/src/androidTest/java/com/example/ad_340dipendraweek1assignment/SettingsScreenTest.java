@@ -107,7 +107,7 @@ public class SettingsScreenTest {
 //        onView(withContentDescription("Open navigation drawer")).perform(click());
 //        onView(withId(R.id.settings_menu_item)).perform(click());
 //
-//        onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
+//        onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("5000")));
 //    }
 
     @Test
