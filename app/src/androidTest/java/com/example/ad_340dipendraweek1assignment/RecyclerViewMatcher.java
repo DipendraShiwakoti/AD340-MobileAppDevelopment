@@ -11,7 +11,9 @@ import org.hamcrest.TypeSafeMatcher;
 
 import java.util.Objects;
 
-
+/**
+ * Created by dannyroa on 5/10/15.
+ */
 public class RecyclerViewMatcher {
     private final int recyclerViewId;
 
