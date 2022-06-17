@@ -54,33 +54,33 @@ public class SettingsScreenTest {
 //        onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
 //    }
 
-//    @Test
-//    public void canSaveWithSheHer() {
-//        onView(withContentDescription("Open navigation drawer")).perform(click());
-//        onView(withId(R.id.settings_menu_item)).perform(click());
-//
-//        onView(withId(R.id.select_matches_time_button)).perform(click());
-//        onView(withClassName(Matchers.equalTo(TimePicker.class.getName())))
-//                .perform(PickerActions.setTime(10, 0));
-//        onView(withId(android.R.id.button1)).perform(click());
-//
-//        onView(withId(R.id.edit_text_distance_in_miles)).perform(replaceText("50"));
-//
-//        onView(withId(R.id.radio_she_her)).perform(click());
-//
-//        onView(withId(R.id.radio_privacy)).perform(click());
-//
-//        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(25.0F, 35.0F));
-//
-//        onView(withId(R.id.saveButton)).perform(click());
-//
-//        onView(withContentDescription("Open navigation drawer")).perform(click());
-//        onView(withId(R.id.matches_menu_item)).perform(click());
-//        onView(withContentDescription("Open navigation drawer")).perform(click());
-//        onView(withId(R.id.settings_menu_item)).perform(click());
-//
-//        onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
-//    }
+    @Test
+    public void canSaveWithSheHer() {
+        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withId(R.id.settings_menu_item)).perform(click());
+
+        onView(withId(R.id.select_matches_time_button)).perform(click());
+        onView(withClassName(Matchers.equalTo(TimePicker.class.getName())))
+                .perform(PickerActions.setTime(10, 0));
+        onView(withId(android.R.id.button1)).perform(click());
+
+        onView(withId(R.id.edit_text_distance_in_miles)).perform(replaceText("50"));
+
+        onView(withId(R.id.radio_she_her)).perform(click());
+
+        onView(withId(R.id.radio_privacy)).perform(click());
+
+        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(25.0F, 35.0F));
+
+        onView(withId(R.id.saveButton)).perform(click());
+
+        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withId(R.id.matches_menu_item)).perform(click());
+        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withId(R.id.settings_menu_item)).perform(click());
+
+        onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
+    }
 
 //    @Test
 //    public void canSaveWithTheyThem() {
@@ -110,33 +110,33 @@ public class SettingsScreenTest {
 //        onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("5000")));
 //    }
 
-    @Test
-    public void canSaveWithNoAnswer() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
-        onView(withId(R.id.settings_menu_item)).perform(click());
-
-        onView(withId(R.id.select_matches_time_button)).perform(click());
-        onView(withClassName(Matchers.equalTo(TimePicker.class.getName())))
-                .perform(PickerActions.setTime(10, 0));
-        onView(withId(android.R.id.button1)).perform(click());
-
-        onView(withId(R.id.edit_text_distance_in_miles)).perform(replaceText("50"));
-
-        onView(withId(R.id.radio_no_answer)).perform(click());
-
-        onView(withId(R.id.radio_privacy)).perform(click());
-
-        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(25.0F, 35.0F));
-
-        onView(withId(R.id.saveButton)).perform(click());
-
-        onView(withContentDescription("Open navigation drawer")).perform(click());
-        onView(withId(R.id.matches_menu_item)).perform(click());
-        onView(withContentDescription("Open navigation drawer")).perform(click());
-        onView(withId(R.id.settings_menu_item)).perform(click());
-
-        onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
-    }
+//    @Test
+//    public void canSaveWithNoAnswer() {
+//        onView(withContentDescription("Open navigation drawer")).perform(click());
+//        onView(withId(R.id.settings_menu_item)).perform(click());
+//
+//        onView(withId(R.id.select_matches_time_button)).perform(click());
+//        onView(withClassName(Matchers.equalTo(TimePicker.class.getName())))
+//                .perform(PickerActions.setTime(10, 0));
+//        onView(withId(android.R.id.button1)).perform(click());
+//
+//        onView(withId(R.id.edit_text_distance_in_miles)).perform(replaceText("50"));
+//
+//        onView(withId(R.id.radio_no_answer)).perform(click());
+//
+//        onView(withId(R.id.radio_privacy)).perform(click());
+//
+//        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(25.0F, 35.0F));
+//
+//        onView(withId(R.id.saveButton)).perform(click());
+//
+//        onView(withContentDescription("Open navigation drawer")).perform(click());
+//        onView(withId(R.id.matches_menu_item)).perform(click());
+//        onView(withContentDescription("Open navigation drawer")).perform(click());
+//        onView(withId(R.id.settings_menu_item)).perform(click());
+//
+//        onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
+//    }
 
 //    @Test
 //    public void canSaveWithPublic() {
