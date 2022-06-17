@@ -8,18 +8,11 @@ import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static com.example.ad_340dipendraweek1assignment.RecyclerViewMatcher.withRecyclerView;
 
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
-
-import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,31 +23,10 @@ public class WelcomeScreenTest {
     public ActivityScenarioRule<WelcomeScreen> welcomeScreenActivity =
             new ActivityScenarioRule<>(WelcomeScreen.class);
 
-    @Before
-    public void setUp() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getInstrumentation().getUiAutomation().executeShellCommand(
-                    "appops set " + ApplicationProvider.getApplicationContext().getPackageName() + " android:mock_location allow");
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
     @Test
     public void clickingOnMatchesDrawerItemDisplaysMatchesFragment() {
         onView(withContentDescription("Open navigation drawer")).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
-
-        double latitude = 47.6082d;
-        double longitude = -122.1890d;
-        welcomeScreenActivity.getScenario().onActivity(activity -> {
-            LocationUtils.startUpdates(activity,
-                    new Handler(Looper.getMainLooper()),
-                    latitude, longitude);
-        });
 
         onView(isRoot()).perform(HelpersViewMatcher.waitView(withText("Cool Guy Mike"), 5000));
 
@@ -71,4 +43,3 @@ public class WelcomeScreenTest {
 //                matches(withText("Pick your daily matches reminder time")));
 //    }
 }
-
